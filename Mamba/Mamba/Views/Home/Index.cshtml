@@ -1,0 +1,235 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model HomeViewModel
+<main>
+
+    <section id="hero">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active image-one">
+                    <div class="col-6 carousel-caption d-none d-md-block">
+                        <h1>Welcome to Mamba</h1>
+                        <p>Some representative placeholder content for the second slide.</p>
+                        <button class="btn btn-primary">Read More</button>
+                    </div>
+                </div>
+                <div class="carousel-item image-two">
+
+                    <div class="col-6 carousel-caption d-none d-md-block">
+                        <h1>Second slide label</h1>
+                        <p>Some representative placeholder content for the second slide.</p>
+                        <button class="btn btn-primary">ReadMore</button>
+                    </div>
+                </div>
+                <div class="carousel-item image-three">
+                    <div class="col-6 carousel-caption  d-none d-md-block">
+                        <h1>Second slide label</h1>
+                        <p>Some representative placeholder content for the second slide.</p>
+                        <button class="btn btn-primary">ReadMore</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+       
+        </div>
+    </section>
+
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 services">
+                    <h3>Services</h3>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-4 cards">
+                    <div class="icon bg-white ">
+                        <i class="fa-solid fa-message "></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <p>
+                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident
+                    </p>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-4 cards">
+                    <div class="icon bg-white ">
+                        <i class="fa-solid fa-message "></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <p>
+                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident
+                    </p>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-4 cards">
+                    <div class="icon bg-white ">
+                        <i class="fa-solid fa-message "></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <p>
+                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident
+                    </p>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-4 cards">
+                    <div class="icon bg-white ">
+                        <i class="fa-solid fa-message "></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <p>
+                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident
+                    </p>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-4 cards">
+                    <div class="icon bg-white ">
+                        <i class="fa-solid fa-message "></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <p>
+                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident
+                    </p>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-4 cards">
+                    <div class="icon bg-white ">
+                        <i class="fa-solid fa-message "></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <p>
+                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        occaecati cupiditate non provident
+                    </p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 team-text">
+                    <h3>Our Team</h3>
+                    <p> Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
+                </div>
+                <div class="col-12 team-member">
+                    <div class="teams-card">
+                        <div class="row">
+                            @foreach (var member in Model.Teams)
+                            {
+                                <div class="col-md-12 col-lg-6 col-xl-3 teams">
+                                    <div class="image">
+                                        <img src="~/upload/team/@member.Image" alt="">
+                                    </div>
+                                    <div class="image-text">
+                                        <h5>@member.Fullname</h5>
+                                        <p>@member.Position</p>
+                                        <ul>
+                                            <li><a href="@member.FaceUrl"><i class="fa-brands fa-facebook"></i></a></li>
+                                            <li><a href="@member.TwitUrl"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="@member.InstaUrl"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a href="@member.LikdnUrl"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            }
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 head-text">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="col-md-12 col-lg-6 box-adress shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h4>Our Address</h4>
+                    <span>A108 Adam Street, New York, NY 535022</span>
+                </div>
+                <div class="col-md-12 col-lg-3 box-email shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h4>Email Address</h4>
+                    <span>info@example.com</span>
+                    <span>contact@example.com</span>
+                </div>
+                <div class="col-md-12 col-lg-3 box-call shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h4>Our Address</h4>
+
+                    <span>+1 5589 55488 55</span>
+                    <p>+1 6678 254445 41</p>
+                </div>
+                <div class="col-12 forms shadow-lg p-3 mb-5 bg-white rounded">
+                    <form>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row mb-4">
+                            <div class="col-md-12 col-lg-6 fullname">
+                                <div class="form-outline">
+                                    <input type="text" id="form6Example1" class="form-control" placeholder="Your Name" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6 email">
+                                <div class="form-outline">
+                                    <input type="text" id="form6Example2" class="form-control" placeholder="Your Email" />
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Number input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form6Example6" class="form-control" placeholder="Your Subject" />
+
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="form-outline mb-4">
+                            <textarea class="form-control" id="form6Example7" rows="8" placeholder="Message"></textarea>
+
+                        </div>
+
+
+                        <!-- Submit button -->
+                        <div class="button">
+                            <button type="submit" class="btn btn-primary btn-block mb-4 mx-auto">Send Message</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

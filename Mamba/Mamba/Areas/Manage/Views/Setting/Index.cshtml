@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<Setting>
+<div class="container">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <a class="btn btn-primary" asp-action="Create">Create</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Key</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Actions</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.Key</th>
+                            <th scope="row">@item.Value</th>
+                            <td>
+                                <a asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-warning">Edit</a>
+                            </td>
+
+
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

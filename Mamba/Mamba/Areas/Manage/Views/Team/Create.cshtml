@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model Team
+<div class="container">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="Fullname" class="form-label">Full Name</label>
+                    <input asp-for="Fullname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="Fullname"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Position" class="form-label">Position</label>
+                    <input asp-for="Position" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="Position"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="TwitUrl" class="form-label">TwitUrl</label>
+                    <input asp-for="TwitUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="TwitUrl"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="FaceUrl" class="form-label">FaceUrl </label>
+                    <input asp-for="FaceUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="FaceUrl"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LikdnUrl" class="form-label">LikdnUrl </label>
+                    <input asp-for="LikdnUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="LikdnUrl"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="InstaUrl" class="form-label">InstaUrl </label>
+                    <input asp-for="InstaUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="InstaUrl"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="ImageFile" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="ImageFile"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

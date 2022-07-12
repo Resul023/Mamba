@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Setting
+<div class="container">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <form asp-action="Edit" method="post" >
+                <div class="mb-3">
+                    <label asp-for="Value" class="form-label">FValue</label>
+                    <input asp-for="Value" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span asp-validation-for="Value"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
